@@ -1,0 +1,14 @@
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.AssemblyInfoInputs.cache
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.AssemblyInfo.cs
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.csproj.CoreCompileInputs.cache
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/bin/Debug/net9.0/BasicOfCSharp
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/bin/Debug/net9.0/BasicOfCSharp.deps.json
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/bin/Debug/net9.0/BasicOfCSharp.runtimeconfig.json
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/bin/Debug/net9.0/BasicOfCSharp.dll
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/bin/Debug/net9.0/BasicOfCSharp.pdb
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.dll
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/refint/BasicOfCSharp.dll
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.pdb
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/BasicOfCSharp.genruntimeconfig.cache
+/home/nk/Documents/KDEMachine/C#/BasicOfCSharp/obj/Debug/net9.0/ref/BasicOfCSharp.dll

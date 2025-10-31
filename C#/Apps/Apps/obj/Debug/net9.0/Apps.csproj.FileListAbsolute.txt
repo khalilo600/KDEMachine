@@ -1,0 +1,14 @@
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/bin/Debug/net9.0/Apps
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/bin/Debug/net9.0/Apps.deps.json
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/bin/Debug/net9.0/Apps.runtimeconfig.json
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/bin/Debug/net9.0/Apps.dll
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/bin/Debug/net9.0/Apps.pdb
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.GeneratedMSBuildEditorConfig.editorconfig
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.AssemblyInfoInputs.cache
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.AssemblyInfo.cs
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.csproj.CoreCompileInputs.cache
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.dll
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/refint/Apps.dll
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.pdb
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/Apps.genruntimeconfig.cache
+/home/nk/Documents/KDEMachine/C#/Apps/Apps/obj/Debug/net9.0/ref/Apps.dll
