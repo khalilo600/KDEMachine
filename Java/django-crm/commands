@@ -1,0 +1,11 @@
+create a venv
+
+python3 -m venv venv
+activate the venv
+source ./venv/bin/activate
+pip install django pip --upgrade
+mkdir src.
+cd src
+django-admin startproject cfehome
+python3 manage.py runserver
+# Open your web browser and go to http://127.0.0.1:8000/

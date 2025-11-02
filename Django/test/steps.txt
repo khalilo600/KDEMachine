@@ -1,0 +1,41 @@
+Here is a summary of the changes and commands executed to create the bookstore application:
+
+1.  **Modified `main_project/myApp/models.py`**:
+    -   Added the `Book` model with fields: `title`, `author`, `price`, and `quantity`.
+
+2.  **Modified `main_project/myApp/admin.py`**:
+    -   Registered the `Book` model with the Django admin interface.
+
+3.  **Modified `main_project/main_project/settings.py`**:
+    -   Added `'myApp'` to the `INSTALLED_APPS` list to register the application with the project.
+
+4.  **Executed `python3 main_project/manage.py makemigrations myApp`**:
+    -   Created migration files for the `Book` model in `myApp`.
+
+5.  **Executed `python3 main_project/manage.py migrate`**:
+    -   Applied the database migrations, creating the `Book` table in the database.
+
+6.  **Modified `main_project/myApp/views.py`**:
+    -   Added `book_list` view to display all books.
+    -   Added `add_book` view to handle adding new books via a form.
+
+7.  **Created directory `main_project/myApp/templates/myApp`**:
+    -   Set up the template directory structure.
+
+8.  **Created `main_project/myApp/templates/myApp/book_list.html`**:
+    -   HTML template for displaying a list of books.
+
+9.  **Created `main_project/myApp/templates/myApp/add_book.html`**:
+    -   HTML template for the form to add new books.
+
+10. **Created `main_project/myApp/urls.py`**:
+    -   Defined URL patterns for `book_list` and `add_book` views within `myApp`.
+
+11. **Modified `main_project/main_project/urls.py`**:
+    -   Included `myApp.urls` in the main project's URL configuration.
+
+12. **Executed `python3 main_project/manage.py runserver &`**:
+    -   Started the Django development server in the background.
+
+You can access the book list at http://127.0.0.1:8000/myApp/
+And add a new book at http://127.0.0.1:8000/myApp/add/

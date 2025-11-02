@@ -1,0 +1,131 @@
+
+# Instructions to Create a Dockerized Django Application
+
+This guide will walk you through setting up a Django application using Docker and Docker Compose, with SQLite as the database.
+
+## Prerequisites
+
+*   Docker installed and running on your system.
+*   Docker Compose installed and accessible (ensure your user is in the `docker` group or use `sudo` as needed).
+
+## Step 1: Create Project Directory
+
+First, create a directory for your Django project.
+
+```bash
+mkdir DjangoApp
+cd DjangoApp
+```
+
+## Step 2: Create Dockerfile
+
+Create a file named `Dockerfile` inside your `DjangoApp` directory with the following content:
+
+```dockerfile
+# Use the official Python image as a base
+FROM python:3.9
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Install dependencies
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+
+# Copy the rest of the application code
+COPY . .
+```
+
+## Step 3: Create requirements.txt
+
+Create a file named `requirements.txt` inside your `DjangoApp` directory with the following content:
+
+```
+Django>=3.2,<4.0
+```
+
+## Step 4: Create docker-compose.yml
+
+Create a file named `docker-compose.yml` inside your `DjangoApp` directory with the following content. This defines your Django web service.
+
+```yaml
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app:z
+    ports:
+      - "8000:8000"
+    user: "1000:1000" # IMPORTANT: Replace 1000:1000 with your actual UID:GID (run 'id -u && id -g')
+```
+
+**Important Note on `user: "1000:1000"`:**
+The `user` directive is crucial for preventing permission denied errors when Docker containers write files to your host machine. The `1000:1000` should be replaced with your actual User ID (UID) and Group ID (GID). You can find these by running `id -u && id -g` in your terminal.
+
+**Important Note on `:z` flag:**
+The `:z` flag in `volumes: - .:/usr/src/app:z` is a workaround for SELinux permission issues often encountered on Fedora and other Linux distributions. It tells Docker to relabel the volume with appropriate permissions for the container.
+
+## Step 5: Build the Docker Image
+
+Before creating the Django project, build the Docker image for your `web` service. This will install Django and other dependencies.
+
+```bash
+sudo docker compose build web
+```
+
+## Step 6: Create the Django Project
+
+Now, create the Django project within the Docker environment. This command will generate the basic Django project structure.
+
+```bash
+sudo docker compose run web django-admin startproject myproject .
+```
+
+## Step 7: Apply Database Migrations
+
+Since we are using SQLite, Django will create a `db.sqlite3` file. Apply the initial database migrations to set up the necessary tables.
+
+```bash
+sudo docker compose run web python manage.py migrate
+```
+
+## Step 8: Create a Superuser (Optional but Recommended)
+
+Create an administrator account to access the Django admin panel. You will be prompted to enter a username, email, and password.
+
+```bash
+sudo docker compose run web python manage.py createsuperuser
+```
+
+## Step 9: Start the Django Development Server
+
+Finally, start your Django development server.
+
+```bash
+sudo docker compose up
+```
+
+## Step 10: Access Your Django Application
+
+Once the server is running, you can access your Django application in your web browser at:
+`http://localhost:8000`
+
+To access the Django admin panel, go to:
+`http://localhost:8000/admin`
+
+## Stopping the Application
+
+To stop the Django application and the Docker containers, press `Ctrl+C` in the terminal where `sudo docker compose up` is running.
+
+If you ran it in detached mode (`-d`), you can stop it by running:
+
+```bash
+sudo docker compose down
+```
