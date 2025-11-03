@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ book.title }}</h1>
+    <p>Author: {{ book.author }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+    <p>Price: ${{ book.price }}</p>
+    <p>Category: {{ book.category.name }}</p>
+    <img src="{{ book.cover_image.url }}" alt="{{ book.title }} Cover" width="200">
+    <form action="{% url 'add_to_cart' book.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Add to Cart</button>
+    </form>
+    <p>
+        <a href="{% url 'book_edit' book.pk %}">Edit Book</a>
+        <a href="{% url 'book_delete' book.pk %}">Delete Book</a>
+    </p>
+{% endblock %}

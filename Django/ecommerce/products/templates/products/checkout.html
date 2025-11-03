@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <h2>Your Order Summary</h2>
+    <ul>
+        {% for item in cart.items.all %}
+            <li>
+                {{ item.product.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.get_total_price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Total: ${{ cart.get_total_price }}</h3>
+
+    <form action="{% url 'checkout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" id="checkout-button">Checkout with Stripe</button>
+    </form>
+
+    <a href="{% url 'cart' %}">Back to Cart</a>
+</body>
+</html>
