@@ -1,0 +1,258 @@
+/*
+    CSS Custom Properties (Variables)
+    The :root selector targets the root element of the document (the <html> tag).
+    By defining custom properties here, they become globally available throughout the stylesheet.
+    This makes it easy to manage and update common values like colors and spacing.
+*/
+:root {
+    /* --primary-color is used for main interactive elements and text. */
+    --primary-color: #007bff;
+    /* --secondary-color is used for less prominent elements, like backgrounds. */
+    --secondary-color: #6c757d;
+    /* --spacing-medium provides a consistent spacing unit. */
+    --spacing-medium: 20px;
+}
+
+/*
+    CSS Selectors Explained:
+
+    1. Universal Selector (*):
+       - Selects all elements on the page.
+       - Example: * { margin: 0; padding: 0; }
+
+    2. Type Selector (element name):
+       - Selects all elements of a given type.
+       - Example: p { font-size: 16px; }
+
+    3. Class Selector (.class-name):
+       - Selects all elements with a specific class attribute.
+       - Example: .my-class { color: blue; }
+
+    4. ID Selector (#id-name):
+       - Selects a single element with a specific ID attribute.
+       - IDs must be unique within a document.
+       - Example: #my-id { background-color: yellow; }
+
+    5. Descendant Selector (space):
+       - Selects an element that is a descendant of another element (can be nested at any level).
+       - Example: div p { color: green; } (selects all <p> elements inside any <div>)
+
+    6. Child Selector (>):
+       - Selects an element that is a direct child of another element.
+       - Example: ul > li { list-style-type: square; } (selects only <li> elements directly inside a <ul>)
+
+    7. Adjacent Sibling Selector (+):
+       - Selects an element that is immediately preceded by a specified sibling element.
+       - Example: h1 + p { margin-top: 10px; } (selects the first <p> immediately after an <h1>)
+
+    8. General Sibling Selector (~):
+       - Selects all sibling elements that follow a specified element.
+       - Example: h1 ~ p { text-indent: 20px; } (selects all <p> elements that are siblings of an <h1> and come after it)
+
+    9. Attribute Selector ([attribute], [attribute="value"], etc.):
+       - Selects elements based on the presence or value of an attribute.
+       - Example: input[type="text"] { border: 1px solid gray; }
+
+    10. Pseudo-classes (:hover, :first-child, :nth-child(), etc.):
+        - Selects elements based on their state or position within the document tree.
+        - Example: a:hover { color: red; }
+
+    11. Pseudo-elements (::before, ::after, ::first-line, etc.):
+        - Selects a part of an element rather than the entire element.
+        - Example: p::first-line { font-weight: bold; }
+*/
+
+/*
+    Header Section Styling
+    This rule targets the main header section of the page.
+*/
+#header-section {
+    /* Sets the background color using the --secondary-color custom property. */
+    background-color: var(--secondary-color);
+    /* Sets the padding using the --spacing-medium custom property. */
+    padding: var(--spacing-medium);
+}
+
+/* Styles the main heading within the header section. */
+#header-section h1 {
+    color: blue;
+}
+
+/* Styles the paragraph within the header section. */
+#header-section p {
+    color: green;
+}
+
+/*
+    Data Table Styling
+    This rule targets the table with the class "data-table".
+*/
+.data-table {
+    /* Makes the table span the full width of its container. */
+    width: 100%;
+    /* Collapses the borders between table cells for a cleaner look. */
+    border-collapse: collapse;
+    /* Adds a solid black border to the table. */
+    border: 1px solid black;
+    /* Adds space above the table. */
+    margin-top: 20px;
+}
+
+/* Styles the header cells (th) and data cells (td) of the data table. */
+.data-table th, .data-table td {
+    /* Adds a border to each cell. */
+    border: 1px solid black;
+    /* Adds padding inside each cell. */
+    padding: 8px;
+}
+
+/* Styles the header cells of the data table. */
+.data-table th {
+    /* Sets a light gray background color for the header row. */
+    background-color: #f2f2f2;
+}
+
+/* Styles the even-numbered rows of the data table for a "zebra-striped" effect. */
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Styles the table rows when hovered over. */
+.data-table tr:hover {
+    background-color: #e6e6e6;
+}
+
+/*
+    List Item Styling
+    This rule targets all list items (<li>).
+*/
+li {
+    /* Sets the text color using the --primary-color custom property. */
+    color: var(--primary-color);
+    /* Removes the default bullet points from the list items. */
+    list-style-type: none;
+    /* Adds space below each list item. */
+    margin-bottom: 10px;
+}
+
+/* Styles the first list item to be bold. */
+li:first-child {
+    font-weight: bold;
+}
+
+/*
+    Link Styling
+    This rule adds content after the link element.
+*/
+a::after {
+    /* Adds the text " (External Link)" after the link text. */
+    content: " (External Link)";
+}
+
+/*
+    Image Styling (Box Model)
+    This rule applies the CSS Box Model properties to the image.
+*/
+img {
+    /* Adds a solid purple border around the image. */
+    border: 5px solid purple;
+    /* Adds padding between the image content and its border. */
+    padding: 10px;
+    /* Adds margin around the image to create space between it and other elements. */
+    margin: 20px;
+    /* Applies a grayscale filter to make the image black and white. */
+    filter: grayscale(100%);
+}
+
+/*
+    Flexbox Container Styling
+    This rule creates a Flexbox layout for the container.
+*/
+#flex-container {
+    /* Sets the display property to flex, enabling Flexbox layout. */
+    display: flex;
+    /* Allows the flex items to wrap to the next line if there isn't enough space. */
+    flex-wrap: wrap;
+    /* Distributes space around the flex items. */
+    justify-content: space-around;
+    /* Vertically aligns the flex items in the center. */
+    align-items: center;
+}
+
+/*
+    Media Query for Responsiveness
+    This rule applies styles only on screens with a maximum width of 600px.
+*/
+@media (max-width: 600px) {
+    /* Stacks the flex items vertically on smaller screens. */
+    #flex-container {
+        flex-direction: column;
+    }
+}
+
+/*
+    Grid Container Styling
+    This rule creates a Grid layout for the container.
+*/
+.grid-container {
+    /* Sets the display property to grid, enabling Grid layout. */
+    display: grid;
+    /* Creates three equal-width columns. */
+    grid-template-columns: repeat(3, 1fr);
+    /* Adds a gap between the grid items. */
+    grid-gap: 20px;
+}
+
+/* Styles the individual grid items. */
+.grid-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    /* Adds a smooth transition effect for the background color. */
+    transition: background-color 0.3s ease;
+}
+
+/* Styles the grid items when hovered over. */
+.grid-item:hover {
+    background-color: #e6e6e6;
+}
+
+/*
+    Animated Box Styling
+    This rule styles the box that will be animated.
+*/
+#animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-top: 50px;
+    /* Applies the "pulse" animation to the box. */
+    animation: pulse 2s infinite alternate;
+}
+
+/* Styles the animated box when hovered over. */
+#animated-box:hover {
+    /* Applies a blur filter to the box on hover. */
+    filter: blur(5px);
+}
+
+/*
+    Keyframe Animation
+    This rule defines the "pulse" animation sequence.
+*/
+@keyframes pulse {
+    /* At the start of the animation, the background is red. */
+    0% { background-color: red; }
+    /* Halfway through, the background is blue. */
+    50% { background-color: blue; }
+    /* At the end, the background is red again. */
+    100% { background-color: red; }
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    padding: 15px;
+    border: 2px solid orange;
+}

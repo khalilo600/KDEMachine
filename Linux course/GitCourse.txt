@@ -1,0 +1,251 @@
+**Git & GitHub Full Course**
+
+This course provides a comprehensive introduction to Git and GitHub, taking you from the fundamentals to more advanced topics. Each section includes explanations and hands-on exercises to help you learn by doing.
+
+---
+
+**Section 1: Introduction to Git & Version Control**
+
+*   **What is Version Control?**
+    *   Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+    *   It allows you to revert files back to a previous state, revert the entire project back to a previous state, compare changes over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more.
+
+*   **What is Git?**
+    *   Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+    *   **Distributed:** Every developer has a full copy of the project's history, which makes it fast and allows for offline work.
+
+*   **What is GitHub?**
+    *   GitHub is a web-based hosting service for version control using Git. It provides a graphical interface and collaboration features like bug tracking, feature requests, and task management.
+
+---
+
+**Section 2: Getting Started**
+
+*   **Installing Git:**
+    *   **Linux (Debian/Ubuntu):** `sudo apt-get install git`
+    *   **Linux (Fedora):** `sudo dnf install git`
+    *   **macOS:** `brew install git` (if you have Homebrew) or install the Xcode Command Line Tools.
+    *   **Windows:** Download and install Git from [https://git-scm.com/downloads](https://git-scm.com/downloads).
+
+*   **First-Time Git Configuration:**
+    *   Before you start using Git, you need to configure it with your name and email address. This is important because every Git commit uses this information.
+    *   **Exercise:**
+        1.  Open your terminal.
+        2.  Set your username:
+            ```bash
+            git config --global user.name "Your Name"
+            ```
+        3.  Set your email address:
+            ```bash
+            git config --global user.email "your.email@example.com"
+            ```
+        4.  You can check your configuration with:
+            ```bash
+            git config --list
+            ```
+
+---
+
+**Section 3: Core Git Concepts**
+
+*   **The Three States:**
+    *   Git has three main states that your files can reside in:
+        1.  **Modified:** You have changed the file but have not committed it to your database yet.
+        2.  **Staged:** You have marked a modified file in its current version to go into your next commit snapshot.
+        3.  **Committed:** The data is safely stored in your local database.
+
+*   **The `.git` Directory:**
+    *   When you initialize a Git repository in a directory, Git creates a hidden `.git` directory.
+    *   This directory contains all the information about your project's history, configuration, and more. You generally don't need to touch the files in this directory directly.
+
+---
+
+**Section 4: Basic Git Commands**
+
+*   **`git init`:**
+    *   Initializes a new Git repository.
+    *   **Exercise:**
+        1.  Create a new directory called `my-git-project`.
+        2.  Navigate into the directory: `cd my-git-project`
+        3.  Initialize a new Git repository: `git init`
+
+*   **`git add`:**
+    *   Adds a change in the working directory to the staging area.
+    *   **Exercise:**
+        1.  Create a new file called `README.md`.
+        2.  Add some text to the file.
+        3.  Add the file to the staging area: `git add README.md`
+
+*   **`git status`:**
+    *   Displays the state of the working directory and the staging area.
+    *   **Exercise:**
+        1.  Run `git status` to see that `README.md` is staged and ready to be committed.
+
+*   **`git commit`:**
+    *   Takes a snapshot of the staged changes and saves it to the project's history.
+    *   **Exercise:**
+        1.  Commit the staged changes with a message:
+            ```bash
+            git commit -m "Initial commit"
+            ```
+
+*   **`git log`:**
+    *   Shows the commit history for the current branch.
+    *   **Exercise:**
+        1.  Run `git log` to see your first commit.
+
+---
+
+**Section 5: Branching & Merging**
+
+*   **What is a Branch?**
+    *   A branch is a lightweight, movable pointer to a commit. The default branch name in Git is `main` (or `master` in older versions).
+    *   Branching allows you to diverge from the main line of development and continue to do work without messing with that main line.
+
+*   **`git branch`:**
+    *   Lists all of the branches in your repository.
+    *   **Exercise:**
+        1.  Create a new branch called `new-feature`:
+            ```bash
+            git branch new-feature
+            ```
+        2.  Run `git branch` to see your new branch.
+
+*   **`git checkout`:**
+    *   Switches to a different branch.
+    *   **Exercise:**
+        1.  Switch to your new branch:
+            ```bash
+            git checkout new-feature
+            ```
+
+*   **`git merge`:**
+    *   Merges the specified branch's history into the current branch.
+    *   **Exercise:**
+        1.  On the `new-feature` branch, create a new file called `feature.txt`.
+        2.  Add and commit the new file.
+        3.  Switch back to the `main` branch: `git checkout main`
+        4.  Merge the `new-feature` branch into `main`:
+            ```bash
+            git merge new-feature
+            ```
+        5.  Run `ls` to see that `feature.txt` is now in the `main` branch.
+
+---
+
+**Section 6: Remote Repositories & GitHub**
+
+*   **What is a Remote?**
+    *   A remote is a common repository that all team members use to exchange their changes.
+
+*   **`git remote`:**
+    *   Manages the set of remotes that you are tracking.
+    *   **Exercise:**
+        1.  Go to [https://github.com](https://github.com) and create a new repository called `my-git-project`.
+        2.  Copy the repository's URL.
+        3.  Add a new remote called `origin`:
+            ```bash
+            git remote add origin <repository_url>
+            ```
+
+*   **`git push`:**
+    *   Uploads your local repository content to a remote repository.
+    *   **Exercise:**
+        1.  Push your `main` branch to the `origin` remote:
+            ```bash
+            git push -u origin main
+            ```
+
+*   **`git pull`:**
+    *   Fetches changes from a remote repository and merges them into your current branch.
+
+*   **`git clone`:**
+    *   Creates a local copy of a remote repository.
+    *   **Exercise:**
+        1.  Go to a different directory on your computer.
+        2.  Clone the repository you just pushed to GitHub:
+            ```bash
+            git clone <repository_url>
+            ```
+
+---
+
+**Section 7: Advanced Topics**
+
+*   **`git stash`:**
+    *   Temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
+
+*   **`git rebase`:**
+    *   Re-applies commits on top of another base tip. It's an alternative to merging.
+
+*   **`git tag`:**
+    *   Marks specific points in history as being important. Typically used to mark release points (e.g., `v1.0`).
+
+---
+
+**Section 8: Git Best Practices**
+
+*   **Commit Messages:**
+    *   Write clear and concise commit messages.
+    *   The first line should be a short summary (50 characters or less).
+    *   The body of the commit message should provide more detail.
+
+*   **Branching Strategy:**
+    *   Use a branching strategy like GitFlow to keep your repository organized.
+    *   Create a new branch for each new feature or bug fix.
+    *   Keep your `main` branch clean and deployable.
+
+---
+
+**Section 9: Connecting to GitHub with SSH**
+
+*   **What is SSH?**
+    *   SSH (Secure Shell) is a cryptographic network protocol for operating network services securely over an unsecured network.
+    *   Using SSH with Git allows you to connect to your remote repositories without having to enter your username and password every time.
+
+*   **Step 1: Check for Existing SSH Keys**
+    *   First, check if you already have an SSH key.
+    *   **Exercise:**
+        1.  Open your terminal.
+        2.  Run the following command:
+            ```bash
+            ls -al ~/.ssh
+            ```
+        3.  If you see files named `id_rsa.pub` or `id_ed25519.pub`, you already have an SSH key and can skip to Step 3.
+
+*   **Step 2: Generate a New SSH Key**
+    *   If you don't have an SSH key, you can generate one.
+    *   **Exercise:**
+        1.  Run the following command, replacing the email address with your own:
+            ```bash
+            ssh-keygen -t ed25519 -C "your.email@example.com"
+            ```
+        2.  When prompted to "Enter a file in which to save the key," press Enter to accept the default location.
+        3.  When prompted, enter a secure passphrase.
+
+*   **Step 3: Add Your SSH Key to the ssh-agent**
+    *   The ssh-agent is a background program that handles passwords for SSH private keys.
+    *   **Exercise:**
+        1.  Start the ssh-agent in the background:
+            ```bash
+            eval "$(ssh-agent -s)"
+            ```
+        2.  Add your SSH private key to the ssh-agent:
+            ```bash
+            ssh-add ~/.ssh/id_ed25519
+            ```
+
+*   **Step 4: Add Your SSH Key to Your GitHub Account**
+    *   The final step is to add your public SSH key to your GitHub account.
+    *   **Exercise:**
+        1.  Copy your public SSH key to your clipboard. On Linux, you can do this with:
+            ```bash
+            cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard
+            ```
+            (You may need to install `xclip`: `sudo apt-get install xclip`)
+        2.  Go to your GitHub account settings.
+        3.  Click on "SSH and GPG keys" in the sidebar.
+        4.  Click "New SSH key" or "Add SSH key."
+        5.  In the "Title" field, add a descriptive label for the new key.
+        6.  Paste your key into the "Key" field.
+        7.  Click "Add SSH key."

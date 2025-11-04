@@ -1,0 +1,60 @@
+    img:hover {
+        border-color: orange;
+    }   
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
+    .note {
+        font-style: italic;
+        color: grey;
+    }
+    .warning {
+        color: red;
+        font-weight: bold;
+    }
+    .success {
+        color: green;
+        font-weight: bold;
+    }
+    .error {
+        color: red;
+        font-weight: bold;
+    }
+    .info {
+        color: blue;
+        font-weight: bold;
+    }
+    .warning {
+        color: orange;
+        font-weight: bold;
+    }
+
+       .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        flex: 1 1 200px;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    #flex-container .flex-item {
+    background-color: lightblue;
+    padding: 15px;
+    margin: 10px;
+    border: 2px solid navy;
+    flex: 1 1 200px; /* grow, shrink, basis */
+    text-align: center;
+}
+
+
+    <script>
+        document.getElementById("animated-box").addEventListener("click", function() {
+            this.classList.toggle("animated");  // Toggle the "animated" class
+        });
+    </script>

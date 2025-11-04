@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "html-validator-cli": "^7.0.1",
+    "live-server": "^1.2.2"
+  }
+}

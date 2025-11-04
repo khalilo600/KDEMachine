@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Examples</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: black;
+            padding: 15px;
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DOM Manipulation Examples</h1>
+
+    <div id="main-container">
+        <p class="content">This is the first paragraph.</p>
+        <p class="content">This is the second paragraph.</p>
+    </div>
+
+    <button id="changeTextBtn">Change Text</button>
+    <p id="dynamicText">This text will change!</p>
+
+    <hr>
+
+    <button id="toggleStyleBtn">Toggle Style</button>
+    <div id="styledBox">This box will change style!</div>
+
+    <hr>
+
+    <button id="addListItemBtn">Add List Item</button>
+    <ul id="myList">
+        <li>First item</li>
+    </ul>
+
+    <hr>
+
+    <input type="text" id="myInput" placeholder="Type something...">
+    <p>You typed: <span id="typedText"></span></p>
+
+    <script src="dom_examples.js"></script>
+</body>
+</html>

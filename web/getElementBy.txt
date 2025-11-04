@@ -1,0 +1,355 @@
+            document.getElementById("dynamicText").textContent = "Text has been changed!";
+        });
+        document.getElementById("animated-box").addEventListener("click", function() {
+            this.classList.toggle("animated");
+        });
+        document.getElementById("showAlertBtn").addEventListener("click", function() {
+            alert("Button clicked!");
+        });
+        document.getElementById("confirmAlertBtn").addEventListener("click", function() {
+            if (confirm("Are you sure you want to do this?")) {
+                alert("Confirmed!");
+            } else {
+                alert("Cancelled.");
+            }
+        });
+        document.getElementById("promptAlertBtn").addEventListener("click", function() {
+            let userInput = prompt("Please enter your name:");
+            alert("Hello, " + userInput + "!");
+        });
+document.getElementById("changeColorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.backgroundColor = "lightblue";
+        });
+        document.getElementById("changeFontSizeBtn").addEventListener("click", function() {
+            document.getElementById("dynamicText").style.fontSize = "24px";
+        }); 
+        document.getElementById("resetBtn").addEventListener("click", function() {
+            document.getElementById("dynamicText").textContent = "This text will change.";
+            document.getElementById("colorBox").style.backgroundColor = "lightgray";
+            document.getElementById("dynamicText").style.fontSize = "16px";
+            document.getElementById("animated-box").classList.remove("animated");
+        });
+        document.getElementById("hideTextBtn").addEventListener("click", function() {
+            let textElement = document.getElementById("dynamicText");
+            if (textElement.style.display === "none") {
+                textElement.style.display = "block";
+            } else {
+                textElement.style.display = "none";
+            }
+        });
+         document.getElementById("addBorderBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.border = "2px solid red";
+        });
+        document.getElementById("removeBorderBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.border = "none";
+        });
+         document.getElementById("toggleVisibilityBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.display === "none") {
+                colorBox.style.display = "block";
+            } else {
+                colorBox.style.display = "none";
+            }
+        });
+        document.getElementById("changeBgColorBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "#f0f8ff";
+        });
+         document.getElementById("resetBgColorBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "";
+        });
+        document.getElementById("increasePaddingBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.padding = "20px";
+        });
+        document.getElementById("decreasePaddingBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.padding = "10px";
+        }); 
+         document.getElementById("rotateBoxBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.transform = "rotate(45deg)";
+        });
+        document.getElementById("resetRotationBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.transform = "none";
+        });
+        document.getElementById("fadeOutBoxBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.opacity = "0.5";
+        });
+        document.getElementById("fadeInBoxBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.opacity = "1";
+        });
+        document.getElementById("resetOpacityBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.opacity = "";
+        });
+        document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        document.getElementById("scrollToBottomBtn").addEventListener("click", function() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth"
+            });
+        });
+         document.getElementById("toggleBoxShadowBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.boxShadow) {
+                colorBox.style.boxShadow = "";
+            } else {
+                colorBox.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
+            }
+        });
+        document.getElementById("resetBoxShadowBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.boxShadow = "";
+        });
+        document.getElementById("toggleBorderRadiusBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.borderRadius) {
+                colorBox.style.borderRadius = "";
+            } else {
+                colorBox.style.borderRadius = "15px";
+            }
+        });
+        document.getElementById("resetBorderRadiusBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.borderRadius = "";
+        });
+        document.getElementById("toggleCursorBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.cursor) {
+                colorBox.style.cursor = "";
+            } else {
+                colorBox.style.cursor = "pointer";
+            }
+        });
+        document.getElementById("resetCursorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.cursor = "";
+        });
+         document.getElementById("changeTextColorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.color = "red";
+        });
+        document.getElementById("resetTextColorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.color = "";
+        });
+         document.getElementById("increaseMarginBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.margin = "20px";
+        });
+        document.getElementById("decreaseMarginBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.margin = "10px";
+        });
+         document.getElementById("toggleOverflowBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.overflow) {
+                colorBox.style.overflow = "";
+            } else {
+                colorBox.style.overflow = "hidden";
+            }
+        });
+        document.getElementById("resetOverflowBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.overflow = "";
+        });
+         document.getElementById("changeTextBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.textTransform = "uppercase";
+        });
+        document.getElementById("resetTextTransformBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.textTransform = "";
+        }
+        );
+        document.getElementById("toggleTextDecorationBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.textDecoration) {
+                colorBox.style.textDecoration = "";
+            } else {
+                colorBox.style.textDecoration = "underline";
+            }
+        });
+        document.getElementById("resetTextDecorationBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.textDecoration = "";
+        });
+
+         document.getElementById("toggleFontWeightBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.fontWeight) {
+                colorBox.style.fontWeight = "";
+            } else {
+                colorBox.style.fontWeight = "bold";
+            }
+        });
+        document.getElementById("resetFontWeightBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.fontWeight = "";
+        });
+        document.getElementById("toggleFontStyleBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.fontStyle) {
+                colorBox.style.fontStyle = "";
+            } else {
+                colorBox.style.fontStyle = "italic";
+            }
+        });
+        document.getElementById("resetFontStyleBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.fontStyle = "";
+        });
+        document.getElementById("toggleTextAlignBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.textAlign === "center") {
+                colorBox.style.textAlign = "left";
+            } else {
+                colorBox.style.textAlign = "center";
+            }
+        });
+        document.getElementById("resetTextAlignBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.textAlign = "";
+        });
+        // Additional functionalities can be added here
+    // more of DOM manipulation and event handling as needed
+document.addEventListener("DOMContentLoaded", function() {
+        // All event listeners and DOM manipulations go here
+    });
+document.getElementById("changeTextBtn").addEventListener("click", function() {
+            document.getElementById("dynamicText").textContent = "Text has been changed!";
+        });
+        document.getElementById("animated-box").addEventListener("click", function() {
+            this.classList.toggle("animated");
+        });
+        document.getElementById("showAlertBtn").addEventListener("click", function() {
+            alert("Button clicked!");
+        });
+        document.getElementById("confirmAlertBtn").addEventListener("click", function() {
+            if (confirm("Are you sure you want to do this?")) {
+                alert("Confirmed!");
+            } else {
+                alert("Cancelled.");
+            }
+        });
+        document.getElementById("promptAlertBtn").addEventListener("click", function() {
+            let userInput = prompt("Please enter your name:");
+            alert("Hello, " + userInput + "!");
+        });
+document.getElementById("changeColorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.backgroundColor = "lightblue";
+        });
+        // by class
+        document.getElementById("changeFontSizeBtn").addEventListener("click", function() {
+            document.getElementById("dynamicText").style.fontSize = "24px";
+        }); 
+        document.getElementById("resetBtn").addEventListener("click", function() {
+            document.getElementById("dynamicText").textContent = "This text will change.";
+            document.getElementById("colorBox").style.backgroundColor = "lightgray";
+            document.getElementById("dynamicText").style.fontSize = "16px";
+            document.getElementById("animated-box").classList.remove("animated");
+        });
+        document.getElementById("hideTextBtn").addEventListener("click", function() {
+            let textElement = document.getElementById("dynamicText");
+            if (textElement.style.display === "none") {
+                textElement.style.display = "block";
+            } else {
+                textElement.style.display = "none";
+            }
+        });
+         document.getElementById("addBorderBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.border = "2px solid red";
+        });
+        document.getElementById("removeBorderBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.border = "none";
+        });
+         document.getElementById("toggleVisibilityBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.display === "none") {
+                colorBox.style.display = "block";
+            } else {
+                colorBox.style.display = "none";
+            }
+        });
+        document.getElementById("changeBgColorBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "#f0f8ff";
+        });
+         document.getElementById("resetBgColorBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "";
+        });
+        document.getElementById("increasePaddingBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.padding = "20px";
+        });
+        document.getElementById("decreasePaddingBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.padding = "10px";
+        }); 
+         document.getElementById("rotateBoxBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.transform = "rotate(45deg)";
+        });
+        document.getElementById("resetRotationBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.transform = "none";
+        });
+        document.getElementById("fadeOutBoxBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.opacity = "0.5";
+        });
+        document.getElementById("fadeInBoxBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.opacity = "1";
+        });
+        document.getElementById("resetOpacityBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.opacity = "";
+        });
+        document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        document.getElementById("scrollToBottomBtn").addEventListener("click", function() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth"
+            });
+        });
+         document.getElementById("toggleBoxShadowBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.boxShadow) {
+                colorBox.style.boxShadow = "";
+            } else {
+                colorBox.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
+            }
+        });
+        document.getElementById("resetBoxShadowBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.boxShadow = "";
+        });
+        document.getElementById("toggleBorderRadiusBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.borderRadius) {
+                colorBox.style.borderRadius = "";
+            } else {
+                colorBox.style.borderRadius = "15px";
+            }
+        });
+        document.getElementById("resetBorderRadiusBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.borderRadius = "";
+        });
+        document.getElementById("toggleCursorBtn").addEventListener("click", function() {
+            let colorBox = document.getElementById("colorBox");
+            if (colorBox.style.cursor) {
+                colorBox.style.cursor = "";
+            } else {
+                colorBox.style.cursor = "pointer";
+            }
+        });
+        document.getElementById("resetCursorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.cursor = "";
+        });
+         document.getElementById("changeTextColorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.color = "red";
+        });
+        document.getElementById("resetTextColorBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.color = "";
+        });
+         document.getElementById("increaseMarginBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.margin = "20px";
+        }); 
+        document.getElementById("decreaseMarginBtn").addEventListener("click", function() {
+            document.getElementById("colorBox").style.margin = "10px";
+        });
+        // get element by tag name
+            document.getElementById("toggleOverflowBtn").addEventListener("click", function() {
+                let colorBox = document.getElementById("colorBox");
+                if (colorBox.style.overflow) {
+                    colorBox.style.overflow = "";
+                } else {
+                    colorBox.style.overflow = "hidden";
+                }
+            });

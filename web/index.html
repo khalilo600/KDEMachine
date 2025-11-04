@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- head is used to contain meta-information about the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- body is used to contain the main content of the document -->
+    <!-- heading used for main title -->
+    <div id="header-section">
+        <h1>Hello World!</h1>
+        <!-- paragraph describing the webpage -->
+        <p>This is my <span style="color: blue;font-weight: bold;">first paragraph</span> on my
+            webpage</p>
+
+    </div> <!-- link to an external website -->
+    <a href="https://www.google.com">Visit Google</a>
+    <br>
+    <!-- image displayed on the webpage -->
+    <div id="flex-container">
+        <img src="https://via.placeholder.com/150" alt="A placeholder image">
+        <ul>
+            <!-- unordered list of items -->
+            <li>Item 1: Learn HTML</li>
+            <li>Item 2: Practice CSS</li>
+            <li>Item 3: Build a project</li>
+        </ul>
+    </div>
+    <br>
+    <!-- table displaying user information -->
+
+    <table class="data-table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>24</td>
+        </tr>
+    </table>
+    <br>
+    <!-- form for user input -->
+
+    <form>
+        <label for="user_name">Your Name:</label>
+        <input type="text" id="user_name" name="user_name">
+        <br>
+        <label for="user_age">Your Age:</label>
+        <input type="number" id="user_age" name="user_age">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+    <div id="animated-box">Animate Me!</div>
+    <p id="dynamicText">This text will change!</p>
+        <button id="changeTextBtn">Click to Change Text</button>
+        <hr>
+        <button id="toggleStyleBtn">Toggle Style</button>
+        <div id="styledBox">This box will change style!</div>
+        <script src="main.js"></script>
+    </body>
+
+</html>
