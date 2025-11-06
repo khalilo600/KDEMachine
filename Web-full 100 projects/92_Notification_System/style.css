@@ -1,0 +1,140 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #6f42c1;
+}
+
+button {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 0 10px 20px 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a35a0;
+}
+
+#show-success-btn {
+    background-color: #28a745;
+}
+#show-success-btn:hover {
+    background-color: #218838;
+}
+
+#show-info-btn {
+    background-color: #17a2b8;
+}
+#show-info-btn:hover {
+    background-color: #138496;
+}
+
+#show-warning-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+#show-warning-btn:hover {
+    background-color: #e0a800;
+}
+
+#show-error-btn {
+    background-color: #dc3545;
+}
+#show-error-btn:hover {
+    background-color: #c82333;
+}
+
+.notifications-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
+    animation: slideIn 0.5s forwards;
+}
+
+.notification.success {
+    border-left: 5px solid #28a745;
+}
+.notification.info {
+    border-left: 5px solid #17a2b8;
+}
+.notification.warning {
+    border-left: 5px solid #ffc107;
+}
+.notification.error {
+    border-left: 5px solid #dc3545;
+}
+
+.notification .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #6c757d;
+    margin-left: 15px;
+}
+
+.notification .close-btn:hover {
+    color: #333;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

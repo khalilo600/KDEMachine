@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title 1 - My WordPress Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page-container">
+        <header id="masthead" class="site-header">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="index.html" rel="home">My Blog</a></h1>
+                <p class="site-description">Just another WordPress site</p>
+            </div>
+            <nav id="site-navigation" class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="content" class="site-content">
+            <main id="main" class="site-main">
+                <article class="post">
+                    <header class="entry-header">
+                        <h1 class="entry-title">Blog Post Title 1</h1>
+                        <div class="entry-meta">
+                            <span>Posted on <time datetime="2025-11-06">November 6, 2025</time></span>
+                            <span> by <a href="#">Admin</a></span>
+                        </div>
+                    </header>
+                    <div class="entry-content">
+                        <p>This is the full content of the blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                    </div>
+                </article>
+
+                <div id="comments" class="comments-area">
+                    <h2 class="comments-title">2 thoughts on "Blog Post Title 1"</h2>
+                    <ol class="comment-list">
+                        <li class="comment">
+                            <article class="comment-body">
+                                <div class="comment-author">
+                                    <p class="comment-author-name">John Doe</p>
+                                </div>
+                                <div class="comment-content">
+                                    <p>This is a great post!</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="comment">
+                            <article class="comment-body">
+                                <div class="comment-author">
+                                    <p class="comment-author-name">Jane Doe</p>
+                                </div>
+                                <div class="comment-content">
+                                    <p>Thanks for sharing!</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ol>
+
+                    <div id="respond" class="comment-respond">
+                        <h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3>
+                        <form action="#" method="post" id="commentform" class="comment-form">
+                            <p class="comment-form-comment">
+                                <label for="comment">Comment</label>
+                                <textarea id="comment" name="comment" cols="45" rows="8" required></textarea>
+                            </p>
+                            <p class="comment-form-author">
+                                <label for="author">Name</label>
+                                <input id="author" name="author" type="text" value="" size="30" required>
+                            </p>
+                            <p class="comment-form-email">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" value="" size="30" required>
+                            </p>
+                            <p class="form-submit">
+                                <input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </main>
+
+            <aside id="secondary" class="widget-area">
+                <section class="widget">
+                    <h2 class="widget-title">Search</h2>
+                    <form class="search-form">
+                        <input type="search" class="search-field" placeholder="Search ...">
+                        <button type="submit" class="search-submit">Search</button>
+                    </form>
+                </section>
+                <section class="widget">
+                    <h2 class="widget-title">Recent Posts</h2>
+                    <ul>
+                        <li><a href="post.html">Blog Post Title 1</a></li>
+                        <li><a href="post.html">Blog Post Title 2</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+
+        <footer id="colophon" class="site-footer">
+            <div class="site-info">
+                <p>&copy; 2025 My Blog. Proudly powered by <a href="#">WordPress</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

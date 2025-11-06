@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML File 95 - Fieldset and Legend</title>
+    <!--
+        Instructions for applying CSS:
+        1. Create a CSS file (e.g., style.css) in the same directory as this HTML file, or in a 'css' subdirectory.
+        2. Link the CSS file to this HTML file by uncommenting and modifying the line below.
+           Example: <link rel="stylesheet" href="style.css">
+        3. Add your CSS rules to the 'style.css' file to style this page.
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fieldset and Legend Styling</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname"><br><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email_contact">Email:</label>
+            <input type="email" id="email_contact" name="email_contact"><br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Save Information">
+    </form>
+    <p>Fieldset and legend elements help group related form controls and can be styled for better visual organization.</p>
+</body>
+</html>

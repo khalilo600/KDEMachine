@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard</h1>
+            </header>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Users</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="card">
+                    <h3>Products</h3>
+                    <p>567</p>
+                </div>
+                <div class="card">
+                    <h3>Orders</h3>
+                    <p>890</p>
+                </div>
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>$12,345</p>
+                </div>
+            </div>
+            <div class="dashboard-widgets">
+                <div class="widget">
+                    <h3>Sales Chart</h3>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="widget">
+                    <h3>Recent Orders</h3>
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>Shipped</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Doe</td>
+                                <td>Processing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

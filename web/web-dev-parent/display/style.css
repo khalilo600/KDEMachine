@@ -1,0 +1,15 @@
+/* The display property is one of the most important CSS properties for controlling layout. */
+
+.block-element {
+    display: block;
+    background-color: lightblue;
+}
+
+.inline-element {
+    display: inline;
+    background-color: lightgreen;
+}
+
+.hidden-element {
+    display: none; /* This will hide the element */
+}

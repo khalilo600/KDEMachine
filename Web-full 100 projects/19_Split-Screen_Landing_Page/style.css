@@ -1,0 +1,52 @@
+.split-screen-container {
+    display: flex;
+    height: 100vh;
+}
+
+.split-screen-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transition: flex 0.5s ease;
+}
+
+.left {
+    background-image: url('https://via.placeholder.com/800x1000');
+    background-size: cover;
+}
+
+.right {
+    background-image: url('https://via.placeholder.com/800x1000');
+    background-size: cover;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.split-screen-container:hover .left {
+    flex: 1;
+}
+
+.split-screen-container:hover .right {
+    flex: 1;
+}
+
+.split-screen-item:hover {
+    flex: 2;
+}

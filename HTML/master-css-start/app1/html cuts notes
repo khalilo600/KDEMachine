@@ -1,0 +1,12 @@
+    <header class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <h1>Welcome to Empower Young Minds</h1>
+          <p>Inspiring the next generation of innovators and leaders.</p>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+          <img src="hero-image.jpg" alt="Empowering Young Minds" />
+        </div>
+      </div>
+    </header>

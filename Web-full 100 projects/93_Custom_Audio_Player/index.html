@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-player-container">
+        <h1>My Custom Audio Player</h1>
+        <audio id="audio-player" class="audio-player" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        <div class="controls">
+            <button id="play-pause-btn" class="play-pause-btn">&#9658;</button>
+            <input type="range" id="progress-bar" class="progress-bar" value="0" min="0" max="100">
+            <div class="time-display">
+                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+            </div>
+            <input type="range" id="volume-bar" class="volume-bar" value="1" min="0" max="1" step="0.1">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

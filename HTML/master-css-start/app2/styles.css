@@ -1,0 +1,50 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+section h2 {
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+}
+
+/* TEMPORARY - Remove after adding all the styles */
+img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+/* 1. Flex - Header Navigation */
+
+/* 2. Flex and Column - Featured Section */
+
+/* 3. Flex/Grid List - Latest Cards */
+
+/* 4. Flex/Grid 2D - Hot News */
+
+/* 4a. Flex/Grid 2D - Hot News - Flex Version */
+
+/* 4b. Flex/Grid 2D - Hot News - Grid Version */
+
+/* 5. Grid - Masonry Layout */
+
+/* 6. Grid Templates - News Gallery */
+
+/* 7. Images and Styling */

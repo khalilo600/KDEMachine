@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar / Date Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="date-picker-container">
+        <input type="text" id="date-input" placeholder="Select Date" readonly>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">&laquo;</button>
+                <div id="month-year"></div>
+                <button id="next-month">&raquo;</button>
+            </div>
+            <div class="calendar-weekdays"></div>
+            <div class="calendar-days"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

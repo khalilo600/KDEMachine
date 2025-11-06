@@ -1,0 +1,6 @@
+/* CSS is not used to directly manipulate the DOM, but it works hand-in-hand with it. */
+/* When you change an element's style with JavaScript, you are changing the inline style of that element, which has the highest specificity. */
+
+#main-heading {
+    color: blue;
+}

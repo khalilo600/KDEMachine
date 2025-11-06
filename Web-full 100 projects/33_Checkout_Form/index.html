@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout</h2>
+        <form>
+            <div class="form-section">
+                <h3>Shipping Address</h3>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Address Line 1" required>
+                <input type="text" placeholder="Address Line 2 (Optional)">
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="Zip Code" required>
+            </div>
+
+            <div class="form-section">
+                <h3>Payment Information</h3>
+                <input type="text" placeholder="Card Number" required>
+                <input type="text" placeholder="Expiration Date (MM/YY)" required>
+                <input type="text" placeholder="CVV" required>
+            </div>
+
+            <div class="form-section">
+                <h3>Order Summary</h3>
+                <p>Product 1: $19.99</p>
+                <p>Product 2: $29.99</p>
+                <p>Shipping: $5.00</p>
+                <h4>Total: $54.98</h4>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>

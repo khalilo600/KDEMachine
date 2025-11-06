@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Parent Relationship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="parent-container">
+        <div class="child block">I am a block-level element. I take up the full width of my parent.</div>
+        <div class="child block">I am another block-level element. I appear on a new line.</div>
+        <span class="child inline">I am an inline element.</span>
+        <span class="child inline">I am another inline element. We sit next to each other.</span>
+    </div>
+
+    <div class="parent-container positioned-parent">
+        I am a positioned parent.
+        <div class="child absolute-child">I am an absolute child. My position is relative to my positioned parent.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

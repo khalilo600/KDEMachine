@@ -1,0 +1,6 @@
+/* You can select and style elements with a specific class using the . selector. */
+
+.important {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,8 @@
+/* You can style iframes using CSS. */
+/* For example, you can change their width and height. */
+
+iframe {
+    width: 600px;
+    height: 450px;
+    border: none;
+}

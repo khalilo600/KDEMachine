@@ -1,0 +1,66 @@
+/*
+At the core of CSS layout is the relationship between an element and its parent, often called its "containing block".
+
+1. The Box Model:
+Every HTML element is a box. This box has:
+- Content: The text, image, etc.
+- Padding: The space between the content and the border.
+- Border: A line around the padding and content.
+- Margin: The space outside the border, between this box and other elements.
+
+2. Containing Block:
+The containing block is the "area" that an element lives in. The size and position of an element are often calculated based on its containing block.
+
+- For `position: static` (the default) and `position: relative`, the containing block is the content area of the nearest block-level ancestor (like a <div>, <p>, or <body>).
+- For `position: absolute`, the containing block is the padding area of the nearest ancestor that has a `position` value other than `static` (e.g., `relative`, `absolute`, `fixed`, or `sticky`).
+- For `position: fixed`, the containing block is the viewport (the browser window).
+
+3. `display: block` vs `display: inline`
+
+- `display: block` (like <div>, <p>, <h1>):
+  - Takes up the full width of its parent container (its containing block).
+  - Starts on a new line.
+  - Respects `width`, `height`, `margin-top`, `margin-bottom`, `padding`.
+
+- `display: inline` (like <span>, <a>, <img>):
+  - Takes up only as much width as its content needs.
+  - Does not start on a new line.
+  - Only respects `margin-left`, `margin-right`, `padding-left`, `padding-right`. It does NOT respect `width`, `height`, `margin-top`, or `margin-bottom`.
+
+*/
+
+.parent-container {
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.child {
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.block {
+    display: block;
+    background-color: lightblue;
+    margin-bottom: 5px;
+}
+
+.inline {
+    display: inline;
+    background-color: lightgreen;
+}
+
+.positioned-parent {
+    position: relative; /* This makes it the containing block for its absolutely positioned children */
+    height: 150px;
+    background-color: #eee;
+}
+
+.absolute-child {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50%;
+    background-color: lightcoral;
+}

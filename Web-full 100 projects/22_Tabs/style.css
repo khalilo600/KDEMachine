@@ -1,0 +1,35 @@
+.tabs {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.tab-headers {
+    display: flex;
+}
+
+.tab-header {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 1rem;
+    flex: 1;
+}
+
+.tab-header.active {
+    background-color: #ddd;
+}
+
+.tab-content-container {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}

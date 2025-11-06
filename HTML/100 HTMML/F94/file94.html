@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML File 94 - Datalist and Output</title>
+    <!--
+        Instructions for applying CSS:
+        1. Create a CSS file (e.g., style.css) in the same directory as this HTML file, or in a 'css' subdirectory.
+        2. Link the CSS file to this HTML file by uncommenting and modifying the line below.
+           Example: <link rel="stylesheet" href="style.css">
+        3. Add your CSS rules to the 'style.css' file to style this page.
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Datalist and Output Elements</h1>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist><br><br>
+
+        <input type="number" id="a" value="10"> + 
+        <input type="number" id="b" value="20"> = 
+        <output name="result" for="a b"></output><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <p>These elements enhance form functionality and can be styled.</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-only Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide-wrapper">
+            <input type="radio" id="slide1" name="slider" checked>
+            <input type="radio" id="slide2" name="slider">
+            <input type="radio" id="slide3" name="slider">
+
+            <div class="slides">
+                <div class="slide"><img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1"></div>
+                <div class="slide"><img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2"></div>
+                <div class="slide"><img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3"></div>
+            </div>
+
+            <div class="navigation">
+                <label for="slide1" class="bar"></label>
+                <label for="slide2" class="bar"></label>
+                <label for="slide3" class="bar"></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

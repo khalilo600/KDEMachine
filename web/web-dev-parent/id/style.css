@@ -1,0 +1,6 @@
+/* You can select and style an element with a specific id using the # selector. */
+
+#my-heading {
+    color: blue;
+    text-align: center;
+}

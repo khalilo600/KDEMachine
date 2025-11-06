@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery with Lightbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+        <a href="https://via.placeholder.com/800x600" class="gallery-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 1">
+        </a>
+        <a href="https://via.placeholder.com/800x600" class="gallery-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 2">
+        </a>
+        <a href="https://via.placeholder.com/800x600" class="gallery-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 3">
+        </a>
+        <a href="https://via.placeholder.com/800x600" class="gallery-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 4">
+        </a>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

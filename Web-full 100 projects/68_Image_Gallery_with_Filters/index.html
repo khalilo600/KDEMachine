@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Filters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Our Image Gallery</h1>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+        </div>
+        <div class="image-gallery" id="image-gallery">
+            <div class="gallery-item nature">
+                <img src="https://via.placeholder.com/300x200/7FFFD4/FFFFFF?text=Nature+1" alt="Nature 1">
+            </div>
+            <div class="gallery-item city">
+                <img src="https://via.placeholder.com/300x200/ADD8E6/FFFFFF?text=City+1" alt="City 1">
+            </div>
+            <div class="gallery-item abstract">
+                <img src="https://via.placeholder.com/300x200/DDA0DD/FFFFFF?text=Abstract+1" alt="Abstract 1">
+            </div>
+            <div class="gallery-item nature">
+                <img src="https://via.placeholder.com/300x200/90EE90/FFFFFF?text=Nature+2" alt="Nature 2">
+            </div>
+            <div class="gallery-item city">
+                <img src="https://via.placeholder.com/300x200/87CEFA/FFFFFF?text=City+2" alt="City 2">
+            </div>
+            <div class="gallery-item abstract">
+                <img src="https://via.placeholder.com/300x200/EE82EE/FFFFFF?text=Abstract+2" alt="Abstract 2">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

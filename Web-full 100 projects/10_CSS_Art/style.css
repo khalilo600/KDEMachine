@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.face {
+    width: 200px;
+    height: 200px;
+    background-color: #ffdd67;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eye {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+}
+
+.eye.left {
+    left: 40px;
+}
+
+.eye.right {
+    right: 40px;
+}
+
+.mouth {
+    width: 100px;
+    height: 50px;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    border-radius: 0 0 100px 100px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}

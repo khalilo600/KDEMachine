@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel with Thumbnails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="main-image-display">
+            <img id="main-image" src="https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Image+1" alt="Main Image">
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
+        </div>
+        <div class="thumbnail-gallery" id="thumbnail-gallery">
+            <img class="thumbnail active" src="https://via.placeholder.com/100x60/FF5733/FFFFFF?text=Thumb+1" data-full="https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Image+1" alt="Thumbnail 1">
+            <img class="thumbnail" src="https://via.placeholder.com/100x60/33FF57/FFFFFF?text=Thumb+2" data-full="https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Image+2" alt="Thumbnail 2">
+            <img class="thumbnail" src="https://via.placeholder.com/100x60/3357FF/FFFFFF?text=Thumb+3" data-full="https://via.placeholder.com/800x400/3357FF/FFFFFF?text=Image+3" alt="Thumbnail 3">
+            <img class="thumbnail" src="https://via.placeholder.com/100x60/FF33F5/FFFFFF?text=Thumb+4" data-full="https://via.placeholder.com/800x400/FF33F5/FFFFFF?text=Image+4" alt="Thumbnail 4">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #3a00b0);
+    color: #fff;
+}
+
+.audio-player-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+.audio-player {
+    display: none; /* Hide default audio player */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.play-pause-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    background: #555;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+.time-display {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.volume-bar {
+    width: 80px;
+    height: 8px;
+    -webkit-appearance: none;
+    background: #555;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+.playlist-chapters-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.playlist-container,
+.chapters-container {
+    flex: 1;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.playlist-container h2,
+.chapters-container h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#playlist,
+#chapters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#playlist li,
+#chapters-list li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.2s ease;
+}
+
+#playlist li:last-child,
+#chapters-list li:last-child {
+    border-bottom: none;
+}
+
+#playlist li:hover,
+#chapters-list li:hover {
+    background-color: #555;
+}
+
+#playlist li.active,
+#chapters-list li.active {
+    background-color: #007bff;
+    font-weight: bold;
+}

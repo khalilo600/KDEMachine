@@ -1,0 +1,10 @@
+/* You can style lists using CSS. */
+/* For example, you can change the list style type. */
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}

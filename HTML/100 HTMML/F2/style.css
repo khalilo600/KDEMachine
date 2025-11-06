@@ -1,0 +1,74 @@
+/* now styling the elements with their respective ids */
+#file2-title {
+    color: blue;
+    font-size: 24px;
+}
+
+#file2-description {
+    color: gray;
+    font-size: 16px;
+}
+
+#file2-div1 {
+    background-color: lightblue;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#file2-div2 {
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#info-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#info-table caption {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#info-table th, #info-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#drink-item-label, #size-label, #additional-requests-label {
+    font-weight: bold;
+}
+
+#submit-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: darkblue;
+}
+
+/* format the grid items */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+    

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML File 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- add id attributes to elements and classes -->
+    <h1 id="file2-title">This is HTML File 2</h1>
+    <p id="file2-description">Welcome to the second HTML file. Feel free to style it with your custom CSS!</p>
+
+    <div class="custom-div" id="file2-div1">This is a custom div element in File 2.</div>
+    <div class="custom-div" id="file2-div2">This is another custom div element in File 2.</div>
+    <table class="custom-table" id="info-table">
+        <caption>Information Table</caption>
+        <thead>
+            <tr>
+                <th>Column A</th>
+                <th>Column B</th>
+                <th>Column C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Info A1</td>
+                <td>Info B1</td>
+                <td>Info C1</td>
+            </tr>
+            <tr>
+                <td>Info A2</td>
+                <td>Info B2</td>
+                <td>Info C2</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- form for drink selection -->
+
+    <form action="#" method="post">
+        <label for="drink-item" id="drink-item-label">Drink Item:</label>
+        <select id="drink-item-input" name="drink-item" required>
+            <option value="coffee">Coffee</option>
+            <option value="tea">Tea</option>
+            <option value="juice">Juice</option>
+        </select>
+        <br>
+        <label for="size" id="size-label">Size:</label>
+        <input type="text" id="size-input" name="size" required>
+        <br>
+        <label for="additional-requests" id="additional-requests-label">Additional Requests:</label>
+        <textarea id="additional-requests-input" name="additional-requests"></textarea>
+        <br>
+        <input id="submit-button" type="submit" value="Submit">
+    </form>
+    <!-- grids -->
+    <div class="grid-container" id="grid-container">
+        <div class="grid-item" id="grid-item1">Grid Item 1</div>
+        <div class="grid-item" id="grid-item2">Grid Item 2</div>
+        <div class="grid-item" id="grid-item3">Grid Item 3</div>
+        <div class="grid-item" id="grid-item4">Grid Item 4</div>
+    </div>
+</body>
+</html>

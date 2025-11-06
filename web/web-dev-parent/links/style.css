@@ -1,0 +1,20 @@
+/* You can style links using CSS. */
+/* You can change the default colors and text decoration. */
+
+a:link {
+    color: red;
+    text-decoration: none; /* remove underline */
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}

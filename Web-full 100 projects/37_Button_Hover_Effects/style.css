@@ -1,0 +1,57 @@
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effect 1: Grow */
+.effect1 {
+    transition: transform 0.3s ease;
+}
+
+.effect1:hover {
+    transform: scale(1.1);
+}
+
+/* Effect 2: Slide from left */
+.effect2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: left 0.3s ease;
+}
+
+.effect2:hover::before {
+    left: 0;
+}
+
+/* Effect 3: Border grow */
+.effect3 {
+    border: 2px solid #4CAF50;
+    background: none;
+    color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.effect3:hover {
+    background-color: #4CAF50;
+    color: white;
+}

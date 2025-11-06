@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Audio Player with Playlist and Chapters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-player-container">
+        <h1>My Custom Audio Player</h1>
+        <audio id="audio-player" class="audio-player" controls></audio>
+        <div class="controls">
+            <button id="play-pause-btn" class="play-pause-btn">&#9658;</button>
+            <input type="range" id="progress-bar" class="progress-bar" value="0" min="0" max="100">
+            <div class="time-display">
+                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+            </div>
+            <input type="range" id="volume-bar" class="volume-bar" value="1" min="0" max="1" step="0.1">
+        </div>
+        <div class="playlist-chapters-wrapper">
+            <div class="playlist-container">
+                <h2>Playlist</h2>
+                <ul id="playlist">
+                    <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" data-chapters='[{"time":0, "title":"Intro"},{"time":30, "title":"Verse 1"},{"time":60, "title":"Chorus"}]' class="active">SoundHelix Song 1</li>
+                    <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-chapters='[{"time":0, "title":"Start"},{"time":45, "title":"Middle"},{"time":90, "title":"End"}]'>SoundHelix Song 2</li>
+                    <li data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-chapters='[{"time":0, "title":"Beginning"},{"time":20, "title":"Part 1"},{"time":40, "title":"Part 2"}]'>SoundHelix Song 3</li>
+                </ul>
+            </div>
+            <div class="chapters-container">
+                <h2>Chapters</h2>
+                <ul id="chapters-list">
+                    <!-- Chapters will be loaded here by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

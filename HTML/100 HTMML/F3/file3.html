@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML File 3</title>
+    <!--
+        Instructions for applying CSS:
+        1. Create a CSS file (e.g., style.css) in the same directory as this HTML file, or in a 'css' subdirectory.
+        2. Link the CSS file to this HTML file by uncommenting and modifying the line below.
+           Example: <link rel="stylesheet" href="style.css">
+        3. Add your CSS rules to the 'style.css' file to style this page.
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- all about HTML tables and submit buttons -->
+    <h1 id="file3-title">This is HTML File 3</h1>
+    <p id="file3-description">Welcome to the third HTML file. You can enhance its appearance with your own CSS styles!</p>
+    <table class="custom-table" id="data-table">
+        <caption>Data Table</caption>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1A</td>
+                <td>Data 2A</td>
+                <td>Data 3A</td>
+            </tr>
+            <tr>
+                <td>Data 1B</td>
+                <td>Data 2B</td>
+                <td>Data 3B</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- books form and add count -->
+    <form id="books-form">
+        <h2>Books Form</h2>
+        <label for="book-title">Title:</label>
+        <input type="text" id="book-title" name="book-title" required>
+        <br>
+        <label for="book-author">Author:</label>
+        <input type="text" id="book-author" name="book-author" required>
+        <br>
+        <label for="book-year">Year:</label>
+        <input type="number" id="book-year" name="book-year" required>
+        <br>
+        <label for="book-count">Count:</label>
+        <input type="number" id="book-count" name="book-count" required>
+        <br>    
+        <input type="submit" value="Add Book">
+    </form>
+
+<!-- create a grocery unorderd list -->
+    <section id="grocery-list-section">
+        <h2>Grocery List</h2>
+        <ul id="grocery-list">
+            <li>Apples</li>
+            <li>Bread</li>
+            <li>Carrots</li>
+            <li>Detergent</li>
+        </ul>
+    </section>
+
+</body>
+</html>

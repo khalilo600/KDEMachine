@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.parallax-bg-1 {
+    background-image: url('https://via.placeholder.com/1500x800?text=Background+1');
+}
+
+.parallax-bg-2 {
+    background-image: url('https://via.placeholder.com/1500x800?text=Background+2');
+}
+
+.parallax-bg-3 {
+    background-image: url('https://via.placeholder.com/1500x800?text=Background+3');
+}
+
+.content-section {
+    height: 50vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}

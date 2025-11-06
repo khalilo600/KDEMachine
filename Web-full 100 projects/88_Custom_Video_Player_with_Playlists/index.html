@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player with Playlists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-player-container">
+        <video id="video-player" class="video-player" controls></video>
+        <div class="controls">
+            <button id="play-pause-btn" class="play-pause-btn">&#9658;</button>
+            <input type="range" id="progress-bar" class="progress-bar" value="0" min="0" max="100">
+            <div class="time-display">
+                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+            </div>
+            <input type="range" id="volume-bar" class="volume-bar" value="1" min="0" max="1" step="0.1">
+            <button id="fullscreen-btn" class="fullscreen-btn">&#x26F6;</button>
+        </div>
+        <div class="playlist-container">
+            <h2>Playlist</h2>
+            <ul id="playlist">
+                <li data-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" class="active">Big Buck Bunny</li>
+                <li data-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">Elephant Dream</li>
+                <li data-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">For Bigger Blazes</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

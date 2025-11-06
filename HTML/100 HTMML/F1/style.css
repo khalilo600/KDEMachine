@@ -1,0 +1,211 @@
+h1{
+    font-size: 24px;
+    color: blue;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+p{
+    display: inline;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
+    margin: 10px 20px;
+    font-family: 'Times New Roman', serif;
+}
+
+.custom-div {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    font-family: Verdana, sans-serif;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+    font-family: Verdana, sans-serif;
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+#name-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#name-input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#email-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#email-input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#message-label {
+    font-weight: bold;
+    margin-right: 10px;
+}   
+#submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #45a049;
+}
+#message-input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#gender-label {
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#gender-select {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ 
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    font-family: Verdana, sans-serif;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}
+textarea {
+    min-height: 100px;
+}  
+
+/* format radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+option {
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}
+button:hover {
+    background-color: #45a049;
+}
+/* checkboxes */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #333;
+    font-family: Verdana, sans-serif;
+}
+input[type="checkbox"]:checked + label {
+    text-decoration: underline;
+}   
+
+/* tables */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.custom-table caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.custom-table tr:hover {
+    background-color: #ddd;
+}
+.custom-table td {
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+}

@@ -1,0 +1,190 @@
+Grid Lines
+==========
+
+Grid lines are the dividing lines that make up the structure of the grid. They can be horizontal or vertical. In a 3x3 grid, there are 4 horizontal and 4 vertical grid lines.
+
+You can place items on the grid by referring to these lines.
+
+**Example:**
+
+**HTML:**
+```html
+<div class="grid-container">
+  <div class="grid-item">1</div>
+</div>
+```
+
+**CSS:**
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
+
+.grid-item {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+```
+
+In this example, the `.grid-item` will start at the second vertical grid line and end at the fourth vertical grid line, and it will start at the first horizontal grid line and end at the third horizontal grid line. This makes the item span two columns and two rows.
+
+Custom Named Grid Lines
+=======================
+
+You can assign custom names to grid lines, which can make your grid layout more readable and maintainable, especially for complex layouts. You define these names within the `grid-template-columns` and `grid-template-rows` properties using square brackets `[]`.
+
+**Example:**
+
+**HTML:**
+```html
+<div class="grid-container">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
+</div>
+```
+
+**CSS:**
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: [sidebar-start] 150px [sidebar-end content-start] 1fr [content-end];
+  grid-template-rows: [header-start] 50px [header-end sidebar-start content-start] 1fr [sidebar-end content-end footer-start] 50px [footer-end];
+  gap: 10px;
+}
+
+.header {
+  grid-column: sidebar-start / content-end;
+  grid-row: header-start / header-end;
+  background-color: lightblue;
+}
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: sidebar-start / sidebar-end;
+  background-color: lightcoral;
+}
+
+.content {
+  grid-column: content-start / content-end;
+  grid-row: content-start / content-end;
+  background-color: lightgreen;
+}
+
+.footer {
+  grid-column: sidebar-start / content-end;
+  grid-row: footer-start / footer-end;
+  background-color: lightgray;
+}
+```
+
+In this example, we've named our grid lines like `sidebar-start`, `content-end`, `header-start`, etc. This allows us to place grid items using these descriptive names instead of numerical indices, making the layout intent clearer. You can also assign multiple names to a single grid line, as seen with `sidebar-end content-start`.
+
+Grid Cell
+=========
+
+A grid cell is the smallest unit of a CSS Grid layout, defined by the intersection of a grid row and a grid column. It's like a single "box" in the grid where content can be placed.
+
+**Example:** In a 3x3 grid, there are 9 grid cells. Each `<div>` directly inside a `grid-container` typically occupies at least one grid cell by default.
+
+Grid Track (Row Tracks and Column Tracks)
+=========================================
+
+A grid track is the space between two adjacent grid lines.
+*   **Column Tracks:** The vertical spaces between two column grid lines.
+*   **Row Tracks:** The horizontal spaces between two row grid lines.
+
+**Example:**
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px; /* Defines three column tracks */
+  grid-template-rows: auto 50px;         /* Defines two row tracks */
+}
+```
+In this example, there are three column tracks (100px, 1fr, 200px wide) and two row tracks (auto, 50px high).
+
+Grid Area
+=========
+
+A grid area is a rectangular space in the grid that can be composed of one or more grid cells. You can define named grid areas and then place grid items into these areas. This is particularly useful for creating complex page layouts.
+
+**Example:**
+
+**HTML:**
+```html
+<div class="grid-container-areas">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main Content</main>
+  <footer>Footer</footer>
+</div>
+```
+
+**CSS:**
+```css
+.grid-container-areas {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav    main   ."
+    "footer footer footer";
+  gap: 10px;
+  height: 300px; /* For demonstration */
+}
+
+header {
+  grid-area: header;
+  background-color: lightblue;
+}
+
+nav {
+  grid-area: nav;
+  background-color: lightcoral;
+}
+
+main {
+  grid-area: main;
+  background-color: lightgreen;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgray;
+}
+```
+Here, `grid-template-areas` defines a layout using named areas. The `header` element is placed in the `header` area, `nav` in `nav`, and so on. The `.` represents an unnamed, empty grid cell.
+
+Grid Gap (or `gap`)
+===================
+
+`grid-gap` (or simply `gap` in modern CSS) is a shorthand property for `grid-row-gap` and `grid-column-gap`. It defines the size of the gutters (the space) between the grid tracks (rows and columns).
+
+**Example:**
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px; /* Sets both row-gap and column-gap to 20px */
+  /* Equivalent to:
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  */
+}
+
+.grid-container-specific-gap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px 30px; /* Sets row-gap to 10px and column-gap to 30px */
+}
+```
+The `gap` property creates spacing *between* grid items, not around the outer edges of the grid container.

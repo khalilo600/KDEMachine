@@ -1,0 +1,73 @@
+.date-picker-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+}
+
+#date-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.calendar-weekdays, .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.calendar-days div {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.calendar-days div:hover {
+    background-color: #eee;
+}
+
+.calendar-days div.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.calendar-days div.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}

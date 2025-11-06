@@ -1,0 +1,8 @@
+/* You can style images using CSS. */
+/* For example, you can change their width and height. */
+
+img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}

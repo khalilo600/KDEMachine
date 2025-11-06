@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Comparison Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Comparison</h1>
+        <div class="comparison-slider">
+            <div class="image-container">
+                <img class="image-before" src="https://via.placeholder.com/600x400/FF5733/FFFFFF?text=Before" alt="Before">
+                <img class="image-after" src="https://via.placeholder.com/600x400/33FF57/FFFFFF?text=After" alt="After">
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+            <div class="slider-line"></div>
+            <div class="slider-button"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

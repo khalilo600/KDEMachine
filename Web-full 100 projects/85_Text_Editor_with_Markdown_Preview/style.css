@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6f42c1;
+}
+
+.editor-area {
+    display: flex;
+    gap: 20px;
+    height: 500px;
+}
+
+#markdown-input,
+.preview-output {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#markdown-input {
+    resize: none;
+    outline: none;
+}
+
+.preview-output {
+    background-color: #f8f8f8;
+}
+
+/* Basic Markdown styling for preview */
+.preview-output h1, .preview-output h2, .preview-output h3, .preview-output h4, .preview-output h5, .preview-output h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.preview-output h1 { font-size: 2em; }
+.preview-output h2 { font-size: 1.5em; }
+.preview-output h3 { font-size: 1.17em; }
+
+.preview-output p {
+    margin-bottom: 1em;
+}
+
+.preview-output ul, .preview-output ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.preview-output pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.preview-output code {
+    font-family: 'Courier New', monospace;
+}

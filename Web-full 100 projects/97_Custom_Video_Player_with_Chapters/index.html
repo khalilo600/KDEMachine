@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player with Chapters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-player-container">
+        <video id="video-player" class="video-player" controls>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button id="play-pause-btn" class="play-pause-btn">&#9658;</button>
+            <input type="range" id="progress-bar" class="progress-bar" value="0" min="0" max="100">
+            <div class="time-display">
+                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+            </div>
+            <input type="range" id="volume-bar" class="volume-bar" value="1" min="0" max="1" step="0.1">
+            <button id="fullscreen-btn" class="fullscreen-btn">&#x26F6;</button>
+        </div>
+        <div class="chapters-container">
+            <h2>Chapters</h2>
+            <ul id="chapters-list">
+                <li data-time="0">Introduction (0:00)</li>
+                <li data-time="60">Chapter 1 (1:00)</li>
+                <li data-time="120">Chapter 2 (2:00)</li>
+                <li data-time="180">Chapter 3 (3:00)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

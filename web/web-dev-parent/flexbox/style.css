@@ -1,0 +1,13 @@
+/* Flexbox is great for distributing space along a single axis. */
+
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+}
+
+.flex-item {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
