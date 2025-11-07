@@ -1,0 +1,193 @@
+<template>
+    <header>
+        <h1>Flexbox Layout</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main class="flex-container">
+        <div
+            v-for="(item, index) in flexItems"
+            :key="index"
+            class="flex-item"
+            :class="{ expanded: expandedItem === index }"
+            @click="toggleExpand(index)"
+        >
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <p v-if="expandedItem === index" class="extra-content">{{ item.extraContent }}</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Flexbox Demo</p>
+    </footer>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const expandedItem = ref(null);
+
+const flexItems = ref([
+    {
+        title: 'Item 1',
+        description: 'This is a flex item. Flexbox is great for distributing space among items.',
+        extraContent: 'Here is some more detailed information about Item 1 that is revealed when the card is expanded. This demonstrates how JavaScript can be used to show and hide content.'
+    },
+    {
+        title: 'Item 2',
+        description: 'You can easily align items, control their order, and make them responsive.',
+        extraContent: 'Expanding this card shows more details about the benefits of using Flexbox for alignment and responsiveness. It\'s a powerful tool for modern web design.'
+    },
+    {
+        title: 'Item 3',
+        description: 'Flexbox is a one-dimensional layout system, meaning it can arrange items in a row or a column.',
+        extraContent: 'This extra content explains that while Flexbox is one-dimensional, it can be combined with other layout methods for more complex designs. The key is understanding its strengths.'
+    },
+    {
+        title: 'Item 4',
+        description: 'It\'s perfect for components within a larger layout, like navigation bars or card grids.',
+        extraContent: 'For example, the navigation bar at the top of this page could be built with Flexbox. This demonstrates its versatility for both large and small-scale layout tasks.'
+    }
+]);
+
+const toggleExpand = (index) => {
+    if (expandedItem.value === index) {
+        expandedItem.value = null; // Collapse if already expanded
+    } else {
+        expandedItem.value = index; // Expand the clicked item
+    }
+};
+</script>
+
+<style scoped>
+/**
+ * This stylesheet provides the styling for the Flexbox layout demo.
+ * It includes general page styling, the flex container and items, and the
+ * specific styles for the interactive expandable card feature.
+ */
+
+/* --- General Page Styles -- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Flexbox Layout Styles -- */
+.flex-container {
+    /* This is the main container for our flex items. */
+    display: flex; /* This is the key property to enable Flexbox. */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if there isn't enough space. */
+    justify-content: space-around; /* Distributes items evenly with space around them. */
+    padding: 20px;
+    gap: 20px; /* Adds space between the flex items. */
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.flex-item {
+    /* Defines how the flex items should grow and shrink. */
+    /* flex-grow: 1 (allows item to grow), flex-shrink: 1 (allows item to shrink), flex-basis: calc(33% - 40px) (initial size). */
+    flex: 1 1 calc(33% - 40px);
+    min-width: 280px; /* Ensures items don't become too small before wrapping. */
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.flex-item h3 {
+    color: #333;
+}
+
+.flex-item p {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* --- Responsive Adjustments -- */
+/* Media queries allow us to change styles based on the screen size. */
+@media (max-width: 768px) {
+    .flex-item {
+        /* On medium screens, each item takes up roughly half the width. */
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-item {
+        /* On small screens, each item takes up the full width. */
+        flex: 1 1 100%;
+    }
+}
+
+/* --- Styles for Expandable Cards -- */
+.flex-item {
+    /* Change the cursor to a pointer to indicate that the item is clickable. */
+    cursor: pointer;
+    /* Add a smooth transition effect for all property changes. */
+    transition: all 0.3s ease-in-out;
+}
+
+.extra-content {
+    /* Hide the extra content by default. */
+    display: none;
+    margin-top: 15px;
+    color: #444;
+}
+
+/* This class is added by JavaScript when a card is clicked. */
+.flex-item.expanded {
+    background-color: #dcdcdc;
+    /* Make the expanded card take up the full width of the container. */
+    /* The 'important' flag is used to override the initial flex-basis value. */
+    flex-basis: 100% !important;
+}
+
+/* When a card has the 'expanded' class, the extra content inside it will be displayed. */
+.flex-item.expanded .extra-content {
+    display: block;
+}
+</style>

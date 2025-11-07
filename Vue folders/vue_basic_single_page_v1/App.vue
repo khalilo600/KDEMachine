@@ -1,0 +1,100 @@
+<template>
+    <header>
+        <!-- this is the header section used for the website title -->
+        <h1>Website Title</h1>
+    </header>
+    <section>
+        <h2>Introduction</h2>
+        <p>Welcome to our website. Here is a brief introduction.</p>
+        <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </section>
+    
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content area of the page.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+</template>
+
+<script setup>
+// No specific script logic needed for this basic layout yet.
+</ncript>
+
+<style scoped>
+/**
+ * This stylesheet provides the basic styling for the single-page layout.
+ * It defines the appearance of the header, navigation, main content, and footer sections.
+ */
+
+/* --- General Body Styles -- */
+body {
+    /* Set the default font for the entire page to a sans-serif font. */
+    font-family: sans-serif;
+    /* Remove the default margin from the body, so the content fills the entire viewport. */
+    margin: 0;
+}
+
+/* --- Header Styles -- */
+header {
+    /* Set a light gray background color for the header. */
+    background-color: #f0f0f0;
+    /* Add some padding to the header to give the content some space. */
+    padding: 20px;
+    /* Center the text within the header. */
+    text-align: center;
+}
+
+/* --- Navigation Styles -- */
+nav {
+    /* Set a slightly darker gray background color for the navigation bar. */
+    background-color: #e0e0e0;
+    /* Add some padding to the navigation bar. */
+    padding: 10px;
+}
+
+nav ul {
+    /* Remove the default bullet points from the unordered list. */
+    list-style-type: none;
+    /* Remove the default margin and padding from the list. */
+    margin: 0;
+    padding: 0;
+    /* Center the list items within the navigation bar. */
+    text-align: center;
+}
+
+nav ul li {
+    /* Display the list items in a single line. */
+    display: inline;
+    /* Add some space between the list items. */
+    margin-right: 20px;
+}
+
+/* --- Main Content Styles -- */
+main {
+    /* Add padding to the main content area to give the content some space. */
+    padding: 20px;
+}
+
+/* --- Footer Styles -- */
+footer {
+    /* Set a light gray background color for the footer. */
+    background-color: #f0f0f0;
+    /* Add some padding to the footer. */
+    padding: 10px;
+    /* Center the text within the footer. */
+    text-align: center;
+    /* Position the footer at the bottom of the viewport. */
+    position: fixed;
+    bottom: 0;
+    /* Make the footer span the full width of the viewport. */
+    width: 100%;
+}
+</style>
