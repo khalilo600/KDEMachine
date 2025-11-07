@@ -1,0 +1,7 @@
+install globally
+
+sudo npm install -g @vue/cli
+sudo npm install -g @ng cli
+
+npm create vue@latest
+vue create my app, to create a cli app

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">E-Shop</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-container">
+        <div class="product-image-gallery">
+            <img src="https://via.placeholder.com/500x500/007bff/FFFFFF?text=Product+Main" alt="Main Product Image" class="main-image">
+            <div class="thumbnail-gallery">
+                <img src="https://via.placeholder.com/100x100/007bff/FFFFFF?text=Thumb1" alt="Thumbnail 1">
+                <img src="https://via.placeholder.com/100x100/007bff/FFFFFF?text=Thumb2" alt="Thumbnail 2">
+                <img src="https://via.placeholder.com/100x100/007bff/FFFFFF?text=Thumb3" alt="Thumbnail 3">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>Premium Wireless Headphones</h1>
+            <p class="price">$199.99</p>
+            <p class="description">Experience unparalleled sound quality and comfort with our premium wireless headphones. Featuring noise-cancellation, long-lasting battery life, and a sleek design, these headphones are perfect for music lovers and professionals alike.</p>
+            <div class="options">
+                <label for="color">Color:</label>
+                <select id="color">
+                    <option value="black">Black</option>
+                    <option value="silver">Silver</option>
+                    <option value="white">White</option>
+                </select>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+            <div id="confirmation-msg"></div>
+            <div class="features-list">
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Active Noise Cancellation</li>
+                    <li>Up to 30 hours battery life</li>
+                    <li>Comfortable over-ear design</li>
+                    <li>High-fidelity audio drivers</li>
+                    <li>Built-in microphone for calls</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-Shop. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

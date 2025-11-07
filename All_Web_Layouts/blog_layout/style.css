@@ -1,0 +1,170 @@
+/**
+ * This stylesheet provides the styling for the blog layout demo.
+ * It defines a two-column layout with a main content area for blog posts
+ * and a sidebar for widgets like categories and recent posts.
+ */
+
+/* --- General Body and Typography Styles -- */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* --- Header Styles -- */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Main Container Styles -- */
+.container {
+    /* Use Flexbox to create the two-column layout. */
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px; /* Space between main content and sidebar. */
+}
+
+/* --- Main Content Area Styles -- */
+.main-content {
+    /* The 'flex: 3' property makes the main content take up more space than the sidebar. */
+    flex: 3;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Blog Post Styles -- */
+.blog-post {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.blog-post h2 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.blog-post .post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.blog-post p {
+    margin-bottom: 15px;
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post .read-more:hover {
+    background-color: #218838;
+}
+
+/* --- Sidebar Styles -- */
+.sidebar {
+    /* The 'flex: 1' property makes the sidebar take up less space than the main content. */
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Widget Styles (within Sidebar) -- */
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget h3 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget ul li {
+    margin-bottom: 8px;
+}
+
+.widget ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.widget ul li a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer Styles -- */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* --- Responsive Adjustments -- */
+@media (max-width: 768px) {
+    .container {
+        /* On smaller screens, stack the main content and sidebar vertically. */
+        flex-direction: column;
+    }
+
+    .main-content, .sidebar {
+        /* Allow both to take full width. */
+        flex: auto;
+    }
+}

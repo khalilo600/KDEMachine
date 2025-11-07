@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Layout Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Project Documentation</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#getting-started">2. Getting Started</a>
+                        <ul>
+                            <li><a href="#installation">2.1. Installation</a></li>
+                            <li><a href="#configuration">2.2. Configuration</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#features">3. Key Features</a></li>
+                    <li><a href="#api-reference">4. API Reference</a></li>
+                    <li><a href="#troubleshooting">5. Troubleshooting</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="introduction">
+                <h2>1. Introduction</h2>
+                <p>Welcome to the official documentation for our amazing project. This guide will help you understand, set up, and utilize all the features our project offers.</p>
+                <p>Our goal is to provide a comprehensive and easy-to-follow resource for both new and experienced users.</p>
+            </section>
+
+            <section id="getting-started">
+                <h2>2. Getting Started</h2>
+                <p>To begin using the project, please follow the steps below.</p>
+
+                <h3 id="installation">2.1. Installation</h3>
+                <p>To install the project, run the following command in your terminal:</p>
+                <pre><code>npm install my-project</code></pre>
+                <p>Alternatively, you can clone the repository:</p>
+                <pre><code>git clone https://github.com/your-repo/my-project.git</code></pre>
+
+                <h3 id="configuration">2.2. Configuration</h3>
+                <p>After installation, navigate to the project directory and open the <code>config.js</code> file. Adjust the settings as needed:</p>
+                <pre><code>// config.js
+module.exports = {
+    apiKey: 'YOUR_API_KEY',
+    debugMode: true
+};</code></pre>
+            </section>
+
+            <section id="features">
+                <h2>3. Key Features</h2>
+                <ul>
+                    <li>Real-time data synchronization</li>
+                    <li>Customizable user interface</li>
+                    <li>Extensive API for integration</li>
+                    <li>Cross-platform compatibility</li>
+                </ul>
+            </section>
+
+            <section id="api-reference">
+                <h2>4. API Reference</h2>
+                <p>For detailed information on our API endpoints, please refer to the dedicated <a href="#">API Reference section</a>.</p>
+            </section>
+
+            <section id="troubleshooting">
+                <h2>5. Troubleshooting</h2>
+                <p>If you encounter any issues, please check our <a href="#">FAQ page</a> or contact our support team.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Project Documentation. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

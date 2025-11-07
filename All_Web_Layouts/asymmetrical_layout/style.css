@@ -1,0 +1,153 @@
+/**
+ * This stylesheet provides the styling for the asymmetrical layout demo.
+ * It defines a layout where the main content area is split into two sections
+ * of unequal width, creating a visually interesting and dynamic design.
+ */
+
+/* --- General Page Styles -- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- Asymmetrical Layout Styles -- */
+main {
+    /* Use Flexbox to create the two-column layout. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-section {
+    /* The 'flex: 2' property makes this section take up twice the space of the .side-content section. */
+    flex: 2;
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.hero-content button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #0056b3;
+}
+
+.side-content {
+    /* The 'flex: 1' property makes this section take up one part of the available space. */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* --- Responsive Adjustments -- */
+@media (max-width: 768px) {
+    main {
+        /* On smaller screens, stack the sections vertically. */
+        flex-direction: column;
+    }
+
+    .hero-section {
+        min-height: 300px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em;
+    }
+}
+
+/* --- Load More Button Styles -- */
+#load-more-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#load-more-btn:hover {
+    background-color: #218838;
+}
+
+#load-more-btn:disabled {
+    /* Styles for the button when it is disabled by the JavaScript. */
+    background-color: #6c757d;
+    cursor: not-allowed;
+}

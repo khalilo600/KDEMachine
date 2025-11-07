@@ -1,0 +1,187 @@
+/**
+ * This stylesheet provides the styling for the documentation layout demo.
+ * It defines a two-column layout with a fixed sidebar for navigation and a scrollable
+ * main content area. It also includes styles for active navigation links and collapsible sections.
+ */
+
+/* --- General Body and Typography Styles -- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+/* --- Header Styles -- */
+header {
+    background-color: #2c3e50; /* Dark blue-gray */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* --- Main Container Styles -- */
+.container {
+    /* Use Flexbox to create the two-column layout (sidebar and content). */
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures content doesn't spill out of rounded corners. */
+}
+
+/* --- Sidebar Styles -- */
+.sidebar {
+    /* flex-grow: 0, flex-shrink: 0, flex-basis: 280px. Makes the sidebar a fixed width. */
+    flex: 0 0 280px;
+    background-color: #ecf0f1; /* Light gray */
+    padding: 30px 20px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto; /* Allows the sidebar content to scroll if it overflows. */
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #34495e; /* Darker blue-gray */
+    display: block;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #3498db; /* Lighter blue */
+}
+
+.sidebar ul ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* --- Main Content Area Styles -- */
+.content {
+    /* flex-grow: 1. Allows the main content to take up all remaining space. */
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto; /* Allows the main content to scroll if it overflows. */
+}
+
+.content h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.content h3 {
+    color: #34495e;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.content pre {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.content code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    color: #c0392b; /* Reddish */
+}
+
+/* --- Footer Styles -- */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* --- Responsive Adjustments -- */
+@media (max-width: 992px) {
+    .container {
+        /* On smaller screens, stack the sidebar and content vertically. */
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        max-height: 300px; /* Limit sidebar height on small screens. */
+    }
+}
+
+/* --- Active Link and Collapsible Section Styles -- */
+.sidebar ul li a.active {
+    /* Style for the currently active navigation link. */
+    color: #3498db;
+    font-weight: bold;
+}
+
+.sidebar ul li.collapsed > ul {
+    /* Hide the sub-menu when the parent list item has the 'collapsed' class. */
+    display: none;
+}
+
+.sidebar ul li:has(ul) > a {
+    /* Position the indicator icon relative to the link. */
+    position: relative;
+}
+
+.sidebar ul li:has(ul) > a::before {
+    /* Add a down-pointing triangle icon using a pseudo-element. */
+    content: '\25BC';
+    position: absolute;
+    right: 10px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li.collapsed > a::before {
+    /* Rotate the triangle icon when the section is collapsed. */
+    transform: rotate(-90deg);
+}

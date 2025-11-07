@@ -1,0 +1,119 @@
+/**
+ * This stylesheet provides the styling for the split-screen layout demo.
+ * It defines the two-panel layout and the interactive hover effect that expands one panel
+ * while shrinking the other.
+ */
+
+/* --- General Body Styles -- */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    /* Hide scrollbars that might appear, as the content is designed to fit the viewport. */
+    overflow: hidden;
+}
+
+/* --- Split Container Styles -- */
+.split-container {
+    /* Use Flexbox to create the side-by-side panel layout. */
+    display: flex;
+    /* Make the container take up the full height of the viewport. */
+    height: 100vh;
+}
+
+/* --- Panel Styles (Shared) -- */
+.split-left, .split-right {
+    /* The 'flex: 1' property makes both panels take up equal width by default. */
+    flex: 1;
+    /* Use Flexbox to center the content within each panel. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    /* Ensure that padding is included in the total width of the element. */
+    box-sizing: border-box;
+}
+
+/* --- Individual Panel Backgrounds -- */
+.split-left {
+    background-color: #3498db; /* Blue */
+}
+
+.split-right {
+    background-color: #2ecc71; /* Green */
+}
+
+/* --- Content and Button Styles -- */
+.content {
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* --- Responsive Adjustments -- */
+@media (max-width: 768px) {
+    .split-container {
+        /* On smaller screens, stack the panels vertically instead of side-by-side. */
+        flex-direction: column;
+    }
+
+    .split-left, .split-right {
+        /* Each panel takes up half the viewport height. */
+        height: 50vh;
+    }
+}
+
+/* --- Hover Effect Styles -- */
+.split-left, .split-right {
+    /* Add a smooth transition effect to the 'flex' property. */
+    /* This makes the panels smoothly change size when hovered over. */
+    transition: flex 0.5s ease-in-out;
+}
+
+/* When the container has the 'hover-left' class (added by JavaScript)... */
+.split-container.hover-left .split-left {
+    /* ...make the left panel take up 3 times the space of the right panel. */
+    flex: 3;
+}
+
+.split-container.hover-left .split-right {
+    /* ...and make the right panel shrink. */
+    flex: 1;
+}
+
+/* When the container has the 'hover-right' class (added by JavaScript)... */
+.split-container.hover-right .split-right {
+    /* ...make the right panel take up 3 times the space of the left panel. */
+    flex: 3;
+}
+
+.split-container.hover-right .split-left {
+    /* ...and make the left panel shrink. */
+    flex: 1;
+}

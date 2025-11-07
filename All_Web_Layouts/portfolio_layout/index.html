@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio/Gallery Layout Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Creative Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="filter-menu">
+        <a href="#" class="active" data-tag="all">All</a>
+        <a href="#" data-tag="web">Web Design</a>
+        <a href="#" data-tag="branding">Branding</a>
+        <a href="#" data-tag="illustration">Illustration</a>
+    </div>
+
+    <main class="portfolio-grid">
+        <div class="portfolio-item" data-tags="web branding">
+            <img src="https://via.placeholder.com/400x300/FF5733/FFFFFF?text=Project+1" alt="Project 1">
+            <h3>Project Title One</h3>
+            <p>A brief description of Project One, highlighting its key features or design principles.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="portfolio-item" data-tags="illustration">
+            <img src="https://via.placeholder.com/400x300/33FF57/FFFFFF?text=Project+2" alt="Project 2">
+            <h3>Project Title Two</h3>
+            <p>A brief description of Project Two, showcasing the technologies used or the client's goals.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="portfolio-item" data-tags="web">
+            <img src="https://via.placeholder.com/400x300/3357FF/FFFFFF?text=Project+3" alt="Project 3">
+            <h3>Project Title Three</h3>
+            <p>A brief description of Project Three, focusing on the creative process or the impact it made.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="portfolio-item" data-tags="branding illustration">
+            <img src="https://via.placeholder.com/400x300/FF33A1/FFFFFF?text=Project+4" alt="Project 4">
+            <h3>Project Title Four</h3>
+            <p>A brief description of Project Four, explaining the challenges overcome and the solutions implemented.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="portfolio-item" data-tags="web">
+            <img src="https://via.placeholder.com/400x300/A1FF33/FFFFFF?text=Project+5" alt="Project 5">
+            <h3>Project Title Five</h3>
+            <p>A brief description of Project Five, detailing the user experience design or the visual aesthetics.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+        <div class="portfolio-item" data-tags="branding">
+            <img src="https://via.placeholder.com/400x300/33A1FF/FFFFFF?text=Project+6" alt="Project 6">
+            <h3>Project Title Six</h3>
+            <p>A brief description of Project Six, emphasizing the innovative aspects or the client collaboration.</p>
+            <a href="#" class="view-project">View Project</a>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Creative Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
